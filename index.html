@@ -1,0 +1,912 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#073b35">
+
+  <title>Geo Zindagi Hospital | Drug Rehabilitation Center Multan</title>
+
+  <meta name="description" content="Geo Zindagi is a drug rehabilitation and recovery center in Alkhalil Colony, Multan. Contact our team for admission information, patient pickup and support.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --green: #073b35;
+      --green2: #0d6153;
+      --mint: #dff5e9;
+      --cream: #f8faf6;
+      --white: #fff;
+      --text: #24352f;
+      --muted: #718078;
+      --gold: #d9b775;
+      --border: #e5ece6;
+      --shadow: 0 18px 55px rgba(7,59,53,.10);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, .brand-name {
+      font-family: "Manrope", sans-serif;
+      line-height: 1.2;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    img { display: block; max-width: 100%; }
+    section { padding: 90px 0; }
+    .container { width: min(1160px, 90%); margin: auto; }
+
+    .topbar {
+      background: #052f2a;
+      color: #e7f5ed;
+      font-size: 12px;
+      padding: 9px 0;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand { display: flex; align-items: center; gap: 12px; }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 15px;
+      background: var(--green);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-size: 26px;
+      font-weight: 800;
+    }
+
+    .brand-name { font-size: 18px; font-weight: 800; color: var(--green); }
+    .brand-sub { font-size: 10px; letter-spacing: 1.6px; color: var(--muted); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover { color: var(--green2); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 14px 21px;
+      border-radius: 9px;
+      border: 1px solid transparent;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .2s ease;
+    }
+
+    .btn-primary { background: var(--green); color: white; }
+    .btn-primary:hover { background: var(--green2); transform: translateY(-2px); }
+    .btn-outline { border-color: rgba(255,255,255,.55); color: white; }
+    .btn-outline:hover { background: white; color: var(--green); }
+    .btn-light { background: white; color: var(--green); }
+    .btn-light:hover { transform: translateY(-2px); }
+
+    .menu-btn {
+      display: none;
+      background: var(--mint);
+      color: var(--green);
+      border: 0;
+      border-radius: 8px;
+      padding: 10px 13px;
+      cursor: pointer;
+    }
+
+    .hero {
+      padding: 70px 0 76px;
+      background:
+        radial-gradient(ellipse at 85% 10%, #d8eee1 0%, transparent 42%),
+        linear-gradient(135deg, #f8faf6, #eff7ef);
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--green2);
+      background: #e3f4e9;
+      padding: 8px 13px;
+      border-radius: 30px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #32986e;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 5.2vw, 65px);
+      letter-spacing: -2.5px;
+      margin: 24px 0 20px;
+      color: var(--green);
+    }
+
+    .hero h1 span { color: var(--green2); }
+
+    .hero p {
+      color: #63736b;
+      max-width: 510px;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .hero-note {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 28px;
+      color: #52655b;
+      font-size: 12px;
+    }
+
+    .hero-note strong { color: var(--green); }
+
+    .hero-visual { position: relative; }
+
+    .hero-photo {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .photo-label {
+      position: absolute;
+      bottom: 22px;
+      left: -22px;
+      right: 22px;
+      background: white;
+      padding: 18px 20px;
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .label-icon {
+      flex-shrink: 0;
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      background: var(--mint);
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+    }
+
+    .photo-label strong { display: block; font-size: 14px; color: var(--green); }
+    .photo-label small { color: var(--muted); font-size: 11px; }
+
+    .features { padding: 0; }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 12px 35px rgba(7,59,53,.045);
+    }
+
+    .feature {
+      padding: 25px 24px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .feature + .feature { border-left: 1px solid var(--border); }
+    .feature-icon { font-size: 27px; }
+    .feature strong { display: block; color: var(--green); font-size: 14px; }
+    .feature small { color: var(--muted); font-size: 11px; }
+
+    .section-heading { max-width: 650px; margin-bottom: 42px; }
+    .section-heading.center { text-align: center; margin-left: auto; margin-right: auto; }
+    .section-heading h2 { font-size: clamp(29px, 4vw, 43px); color: var(--green); margin: 16px 0; letter-spacing: -1.3px; }
+    .section-heading p { font-size: 14px; color: var(--muted); line-height: 1.9; }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .about-image {
+      height: 430px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .about-copy h2 {
+      font-size: clamp(29px, 4vw, 43px);
+      color: var(--green);
+      letter-spacing: -1.5px;
+      margin: 18px 0;
+    }
+
+    .about-copy p { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+
+    .check-list { list-style: none; display: grid; gap: 12px; margin: 23px 0 28px; }
+    .check-list li { font-size: 13px; font-weight: 600; display: flex; gap: 10px; align-items: flex-start; }
+    .check { color: #18865e; font-weight: 900; }
+
+    .services-section { background: #edf5ee; }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      background: white;
+      border: 1px solid #e1ebe2;
+      border-radius: 16px;
+      padding: 28px;
+      transition: .25s;
+    }
+
+    .service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+    .service-icon { width: 54px; height: 54px; display: grid; place-items: center; background: var(--mint); border-radius: 15px; font-size: 26px; margin-bottom: 22px; }
+    .service-card h3 { font-size: 18px; color: var(--green); margin-bottom: 12px; }
+    .service-card p { font-size: 13px; color: var(--muted); line-height: 1.85; }
+
+    .care-section { background: var(--green); color: white; }
+    .care-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .care-section .eyebrow { background: rgba(255,255,255,.12); color: #c5efdb; }
+    .care-section h2 { font-size: clamp(31px, 4vw, 45px); margin: 20px 0; letter-spacing: -1px; }
+    .care-section p { color: #c7dcd3; font-size: 14px; line-height: 1.9; }
+    .care-list { display: grid; gap: 16px; margin-top: 26px; }
+    .care-item { display: flex; gap: 14px; align-items: flex-start; }
+    .care-item span { font-size: 22px; }
+    .care-item strong { display: block; font-size: 14px; margin-bottom: 3px; }
+    .care-item small { color: #c7dcd3; font-size: 12px; }
+
+    .care-panel {
+      padding: 35px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 20px;
+    }
+
+    .care-panel h3 { font-size: 23px; margin-bottom: 13px; }
+    .care-panel p { margin-bottom: 24px; }
+
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .step { padding: 27px; border: 1px solid var(--border); border-radius: 15px; background: white; }
+    .step-number { font-size: 12px; font-weight: 800; color: var(--green2); background: var(--mint); padding: 8px 12px; border-radius: 9px; display: inline-block; margin-bottom: 19px; }
+    .step h3 { font-size: 17px; color: var(--green); margin-bottom: 10px; }
+    .step p { font-size: 12px; color: var(--muted); }
+
+    .contact-section { background: #edf5ee; }
+    .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 30px; align-items: stretch; }
+    .contact-info { padding: 35px; background: var(--green); border-radius: 18px; color: white; }
+    .contact-info h2 { font-size: 32px; margin: 17px 0; }
+    .contact-info > p { color: #c8ddd4; font-size: 13px; }
+    .contact-detail { display: flex; gap: 14px; margin-top: 27px; }
+    .contact-detail > span { font-size: 22px; }
+    .contact-detail strong { display: block; font-size: 13px; }
+    .contact-detail small { display: block; color: #c8ddd4; font-size: 12px; margin-top: 4px; }
+
+    .contact-form { background: white; padding: 35px; border-radius: 18px; border: 1px solid var(--border); }
+    .contact-form h3 { color: var(--green); font-size: 24px; margin-bottom: 8px; }
+    .contact-form > p { color: var(--muted); font-size: 12px; margin-bottom: 24px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .field { display: flex; flex-direction: column; gap: 7px; }
+    .field.full { grid-column: 1 / -1; }
+    .field label { font-size: 12px; font-weight: 700; }
+    .field input, .field textarea, .field select { width: 100%; padding: 12px; border: 1px solid #dfe8e0; border-radius: 8px; outline: none; background: #fbfdfb; color: var(--text); font-size: 13px; }
+    .field input:focus, .field textarea:focus, .field select:focus { border-color: var(--green2); }
+    .field textarea { min-height: 100px; resize: vertical; }
+    .form-note { font-size: 11px; color: var(--muted); margin: 12px 0 17px; }
+
+    .map-link { display: inline-flex; margin-top: 18px; color: #d8f2e4; font-size: 12px; text-decoration: underline; }
+
+    footer { background: #042c27; color: white; padding: 35px 0; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; align-items: center; flex-wrap: wrap; }
+    footer p { color: #bfd4ca; font-size: 11px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 18px; font-size: 12px; }
+
+    .disclaimer { padding: 18px 0; background: #f0f3ee; }
+    .disclaimer p { font-size: 10px; color: #68776d; text-align: center; }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 99;
+      background: #168b5b;
+      color: white;
+      border-radius: 40px;
+      padding: 13px 19px;
+      font-size: 12px;
+      font-weight: 800;
+      box-shadow: 0 8px 25px #073b3530;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links { gap: 14px; }
+      .navbar > .btn { display: none; }
+      .hero-grid { gap: 30px; }
+      .hero-photo { height: 400px; }
+      .about-grid, .care-grid { gap: 35px; }
+      .service-grid { grid-template-columns: repeat(2, 1fr); }
+      .feature { padding: 20px 13px; }
+    }
+
+    @media (max-width: 680px) {
+      section { padding: 65px 0; }
+      .container { width: 91%; }
+      .topbar-inner { justify-content: center; text-align: center; }
+      .navbar { min-height: 72px; }
+      .brand-name { font-size: 16px; }
+      .brand-sub { font-size: 9px; }
+      .logo { width: 42px; height: 42px; }
+      .menu-btn { display: block; }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: white;
+        border-bottom: 1px solid var(--border);
+        padding: 20px 5%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 12px 0; }
+      .hero { padding: 48px 0 65px; }
+      .hero-grid, .about-grid, .care-grid, .contact-grid { grid-template-columns: 1fr; }
+      .hero-grid { gap: 40px; }
+      .hero h1 { font-size: 43px; letter-spacing: -1.8px; }
+      .hero p { font-size: 14px; }
+      .hero-photo { height: 340px; }
+      .photo-label { left: 10px; right: 10px; bottom: -22px; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .feature + .feature { border-left: 0; border-top: 1px solid var(--border); }
+      .feature { padding: 17px 22px; }
+      .about-image { height: 320px; }
+      .service-grid, .steps { grid-template-columns: 1fr; }
+      .service-card { padding: 24px; }
+      .care-panel, .contact-info, .contact-form { padding: 25px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .whatsapp-float { right: 12px; bottom: 12px; padding: 12px 15px; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>📍 Alkhalil Colony, Multan, Pakistan</span>
+      <span>🕒 Contact us for 24/7 service and admission information</span>
+    </div>
+  </div>
+
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="#home" aria-label="Geo Zindagi home">
+        <div class="logo">G<span style="color:#d9b775">+</span></div>
+        <div>
+          <div class="brand-name">Geo Zindagi</div>
+          <div class="brand-sub">REHABILITATION CENTER</div>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#care">Patient Care</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="btn btn-primary" href="#contact">Contact Our Team ↗</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Care • Support • Recovery</span>
+
+          <h1>A New Beginning.<br><span>A Better Life.</span></h1>
+
+          <p>
+            Welcome to Geo Zindagi, a drug rehabilitation and recovery
+            center in Multan. We aim to provide a respectful environment,
+            supportive care and guidance for individuals and their families
+            on the journey toward recovery.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Get Admission Information ↗</a>
+            <a href="#about" class="btn" style="border-color:#d5e3d8;color:#24483a">Explore Our Center</a>
+          </div>
+
+          <div class="hero-note">
+            <span style="font-size:22px">♡</span>
+            <span><strong>Every person matters.</strong><br>Respectful care for patients and families.</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img
+            class="hero-photo"
+            src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1100&q=85"
+            alt="Healthcare professional in a clinical care setting"
+          >
+          <div class="photo-label">
+            <div class="label-icon">🌿</div>
+            <div>
+              <strong>Support for a Fresh Start</strong>
+              <small>Care, dignity and recovery guidance</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container feature-grid">
+        <div class="feature">
+          <div class="feature-icon">🕒</div>
+          <div><strong>24/7 Service</strong><small>Contact team availability</small></div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🚐</div>
+          <div><strong>Patient Pickup</strong><small>Ask about pickup arrangements</small></div>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🤝</div>
+          <div><strong>Family Support</strong><small>Information and guidance</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container about-grid">
+        <div>
+          <img
+            class="about-image"
+            src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=1000&q=85"
+            alt="Healthcare professional offering supportive consultation"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="about-copy">
+          <span class="eyebrow">ABOUT GEO ZINDAGI</span>
+          <h2>Recovery Starts With the Right Support.</h2>
+
+          <p>
+            Geo Zindagi is a drug rehabilitation center located in
+            Alkhalil Colony, Multan. Our goal is to help patients and
+            their families explore recovery support in a respectful,
+            private and welcoming environment.
+          </p>
+
+          <p>
+            We believe that each person's situation deserves individual
+            attention. Contact our team to learn about available care,
+            admission requirements and appropriate treatment options.
+          </p>
+
+          <ul class="check-list">
+            <li><span class="check">✓</span> Respectful and compassionate communication</li>
+            <li><span class="check">✓</span> Information for patients and their families</li>
+            <li><span class="check">✓</span> Patient pickup arrangements on request</li>
+            <li><span class="check">✓</span> Help with admission and service enquiries</li>
+          </ul>
+
+          <a class="btn btn-primary" href="#contact">Talk to Our Team ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-section" id="services">
+      <div class="container">
+        <div class="section-heading center">
+          <span class="eyebrow">OUR SERVICES</span>
+          <h2>Support at Every Step</h2>
+          <p>
+            Contact Geo Zindagi to learn more about available rehabilitation
+            services and the support appropriate for your circumstances.
+          </p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-icon">🌱</div>
+            <h3>Drug Rehabilitation</h3>
+            <p>Information about rehabilitation options and recovery support for individuals affected by substance use.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🧠</div>
+            <h3>Mental Health Support</h3>
+            <p>Ask our team about mental health assessment, professional support and suitable care options.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🏥</div>
+            <h3>Residential Care</h3>
+            <p>Enquire about residential admission, available rooms, facilities and the center's care arrangements.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">🚐</div>
+            <h3>Patient Pickup</h3>
+            <p>Pickup arrangements may be discussed with our team, subject to location, availability and suitability.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">👨‍👩‍👦</div>
+            <h3>Family Guidance</h3>
+            <p>Families can contact us to understand the admission process and discuss ways to support a loved one.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">📞</div>
+            <h3>24/7 Enquiries</h3>
+            <p>Contact us to enquire about service availability, admission information and how to reach the center.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="care-section" id="care">
+      <div class="container care-grid">
+        <div>
+          <span class="eyebrow">PATIENT-CENTERED APPROACH</span>
+          <h2>Care That Respects Every Individual.</h2>
+          <p>
+            Taking the first step toward recovery can be difficult.
+            Our aim is to make it easier for patients and families
+            to ask questions, understand available options and
+            learn about the next steps.
+          </p>
+
+          <div class="care-list">
+            <div class="care-item">
+              <span>🔒</span>
+              <div>
+                <strong>Respect and Privacy</strong>
+                <small>Patient information should be handled confidentially and appropriately.</small>
+              </div>
+            </div>
+            <div class="care-item">
+              <span>🛏️</span>
+              <div>
+                <strong>Facility Information</strong>
+                <small>Ask about room availability, accommodation and center facilities before admission.</small>
+              </div>
+            </div>
+            <div class="care-item">
+              <span>🩺</span>
+              <div>
+                <strong>Appropriate Care</strong>
+                <small>Discuss individual medical needs and treatment options with qualified healthcare professionals.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="care-panel">
+          <h3>Need Help With Admission?</h3>
+          <p>
+            Our team can explain the enquiry process, discuss pickup
+            arrangements and provide information about the services
+            currently available at Geo Zindagi.
+          </p>
+          <a class="btn btn-light" href="#contact">Enquire About Admission ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <div class="section-heading center">
+          <span class="eyebrow">HOW TO GET STARTED</span>
+          <h2>Your First Steps</h2>
+          <p>Contact us to discuss your situation and understand the next steps.</p>
+        </div>
+
+        <div class="steps">
+          <article class="step">
+            <span class="step-number">STEP 01</span>
+            <h3>Get in Touch</h3>
+            <p>Contact the center to ask about services, admission requirements and availability.</p>
+          </article>
+          <article class="step">
+            <span class="step-number">STEP 02</span>
+            <h3>Discuss Your Needs</h3>
+            <p>Explain your enquiry and ask about appropriate professional assessment and care options.</p>
+          </article>
+          <article class="step">
+            <span class="step-number">STEP 03</span>
+            <h3>Plan the Next Step</h3>
+            <p>Confirm the admission process, arrangements, costs and pickup availability directly with the center.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="section-heading center">
+          <span class="eyebrow">CONTACT US</span>
+          <h2>We're Here to Listen.</h2>
+          <p>Contact Geo Zindagi for location details, service enquiries and admission information.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <span class="eyebrow">GEO ZINDAGI</span>
+            <h2>Let's Talk.</h2>
+            <p>Reach out to learn about our center and available services.</p>
+
+            <div class="contact-detail">
+              <span>📍</span>
+              <div>
+                <strong>Our Location</strong>
+                <small>Street 3, House 5,<br>Alkhalil Colony, Multan, Pakistan</small>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <span>🕒</span>
+              <div>
+                <strong>Service Availability</strong>
+                <small>24-hour service as stated by the center. Confirm specific arrangements by phone.</small>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <span>👨‍⚕️</span>
+              <div>
+                <strong>Center Owner</strong>
+                <small>Dr. Muhammad Ayoub</small>
+              </div>
+            </div>
+
+            <a class="map-link"
+               href="https://www.google.com/maps?q=30.1578138,71.4900628"
+               target="_blank" rel="noopener noreferrer">
+              View location on Google Maps ↗
+            </a>
+          </div>
+
+          <div class="contact-form">
+            <h3>Request Information</h3>
+            <p>Complete this form to prepare an enquiry message for WhatsApp.</p>
+
+            <form id="enquiryForm">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name">Your Name</label>
+                  <input id="name" name="name" type="text" placeholder="Enter your name" required>
+                </div>
+
+                <div class="field">
+                  <label for="phone">Contact Number</label>
+                  <input id="phone" name="phone" type="tel" placeholder="Your phone number" required>
+                </div>
+
+                <div class="field full">
+                  <label for="topic">How can we help?</label>
+                  <select id="topic" name="topic" required>
+                    <option value="">Select an enquiry</option>
+                    <option>Admission information</option>
+                    <option>Rehabilitation services</option>
+                    <option>Patient pickup</option>
+                    <option>Facility information</option>
+                    <option>Other enquiry</option>
+                  </select>
+                </div>
+
+                <div class="field full">
+                  <label for="message">Message (optional)</label>
+                  <textarea id="message" name="message" placeholder="Write your enquiry here"></textarea>
+                </div>
+              </div>
+
+              <p class="form-note">
+                Your message will be prepared in WhatsApp. Please avoid
+                entering sensitive medical details in this website form.
+              </p>
+
+              <button type="submit" class="btn btn-primary" style="width:100%">
+                Continue to WhatsApp ↗
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a class="brand" href="#home">
+        <div class="logo">G<span style="color:#d9b775">+</span></div>
+        <div>
+          <div class="brand-name" style="color:white">Geo Zindagi</div>
+          <div class="brand-sub" style="color:#bfd4ca">REHABILITATION CENTER</div>
+        </div>
+      </a>
+
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#care">Patient Care</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <p>© <span id="year"></span> Geo Zindagi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="disclaimer">
+    <div class="container">
+      <p>
+        This website provides general information only and is not a substitute
+        for professional medical advice or emergency care. Service descriptions
+        and availability should be confirmed directly with the center.
+      </p>
+    </div>
+  </div>
+
+  <a class="whatsapp-float" id="floatingWhatsApp" href="#contact">
+    💬 Contact Us
+  </a>
+
+  <script>
+    // IMPORTANT: Replace this with the center's real WhatsApp number.
+    // Use country code + number without +, spaces or dashes.
+    const WHATSAPP_NUMBER = "92XXXXXXXXXX";
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("open");
+      menuBtn.setAttribute("aria-expanded", String(isOpen));
+      menuBtn.textContent = isOpen ? "✕" : "☰";
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        menuBtn.setAttribute("aria-expanded", "false");
+        menuBtn.textContent = "☰";
+      });
+    });
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    document.getElementById("enquiryForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!/^92\d{10}$/.test(WHATSAPP_NUMBER)) {
+        alert("Website setup required: add the center's real WhatsApp number in the JavaScript code before using this form.");
+        return;
+      }
+
+      const name = document.getElementById("name").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const topic = document.getElementById("topic").value;
+      const message = document.getElementById("message").value.trim();
+
+      const text = [
+        "Hello Geo Zindagi Hospital,",
+        "",
+        "I would like information about your services.",
+        "Name: " + name,
+        "Contact number: " + phone,
+        "Enquiry: " + topic,
+        message ? "Message: " + message : ""
+      ].filter(Boolean).join("\n");
+
+      const url = "https://wa.me/" + WHATSAPP_NUMBER +
+        "?text=" + encodeURIComponent(text);
+
+      window.open(url, "_blank", "noopener,noreferrer");
+    });
+
+    document.getElementById("floatingWhatsApp").addEventListener("click", function (event) {
+      if (!/^92\d{10}$/.test(WHATSAPP_NUMBER)) {
+        event.preventDefault();
+        alert("Add the center's real WhatsApp number in the JavaScript code to enable direct WhatsApp contact.");
+      }
+    });
+  </script>
+
+</body>
+</html>
